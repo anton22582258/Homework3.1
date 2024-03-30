@@ -1,7 +1,6 @@
 package ru.hogwarts.school.model;
 
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +17,7 @@ public class Faculty {
     private String name;
     private String color;
 
-    public Faculty(String name, String color,Long id ) {
+    public Faculty(String name, String color, Long id) {
         this.name = name;
         this.color = color;
         this.id = id;
@@ -67,10 +66,6 @@ public class Faculty {
 
     @Override
     public String toString() {
-        return "Faculty{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "Faculty{" + "id=" + id + ", name='" + name + '\'' + ", color='" + color + '\'' + '}';
     }
 }

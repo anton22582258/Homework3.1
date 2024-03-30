@@ -1,19 +1,17 @@
 package ru.hogwarts.school.service;
 
-import org.springframework.data.jpa.domain.AbstractPersistable_;
 import org.springframework.stereotype.Service;
-import ru.hogwarts.school.model.Faculty;
+import ru.hogwarts.school.exception.StudentNotFoundException;
 import ru.hogwarts.school.model.Student;
 import ru.hogwarts.school.repository.StudentRepository;
-import ru.hogwarts.school.exception.StudentNotFoundException;
 
 import java.util.Collection;
-import java.util.List;
 
 @Service
 public class StudentService {
 
     private final StudentRepository studentRepository;
+
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
@@ -44,6 +42,7 @@ public class StudentService {
     public Collection<Student> getAll() {
         return studentRepository.findAll();
     }
+
     public Collection<Student> getByAge(int age) {
         return studentRepository.findAllByAge(age);
     }
